@@ -17,7 +17,7 @@ export class ChartComponent implements OnInit {
   monthName=this.months[this.d.getMonth()]; // "July" (or current month)
 attendanceData:Array<attendanceChart>=[];
 temp:Array<attendanceChart>=[];
-view:any = [1000, 350];
+view:any = [900, 250];
 
 // options
 showXAxis = true;
