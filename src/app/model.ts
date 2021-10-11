@@ -13,3 +13,7 @@ export interface attendance{
     date:string,
     present:Array<student>
 }
+export interface attendanceChart{
+    name:string,
+    value:number
+}

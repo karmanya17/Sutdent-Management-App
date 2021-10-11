@@ -15,7 +15,9 @@ import { AttendanceComponent } from './attendance/attendance.component';
 import { DatePipe } from '@angular/common';
 import { AttenancedateComponent } from './attenancedate/attenancedate.component';
 import { SearchAttendanceComponent } from './search-attendance/search-attendance.component';
-
+import { ChartComponent } from './chart/chart.component';
+import {NgxChartsModule} from '@swimlane/ngx-charts';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,14 +31,17 @@ import { SearchAttendanceComponent } from './search-attendance/search-attendance
     StudentEditComponent,
     AttendanceComponent,
     AttenancedateComponent,
-    SearchAttendanceComponent
+    SearchAttendanceComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgxChartsModule,
+    BrowserAnimationsModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
