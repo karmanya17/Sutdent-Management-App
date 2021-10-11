@@ -17,7 +17,7 @@ export class ChartComponent implements OnInit {
   monthName=this.months[this.d.getMonth()]; // "July" (or current month)
 attendanceData:Array<attendanceChart>=[];
 temp:Array<attendanceChart>=[];
-view:any = [1100, 350];
+view:any = [1000, 350];
 
 // options
 showXAxis = true;
@@ -38,7 +38,7 @@ colorScheme = {
     this.loadData();
   }
 
-  sortDate(a:any,b:any){
+  sortDate(a:any,b:any){                  //Comparator function for sorting the dates
     if ( a.date < b.date ){
       return -1;
     }
@@ -50,14 +50,14 @@ colorScheme = {
  loadData(){
     
      this.attendanceservice.getAll().subscribe((data)=>{
-      data.sort(this.sortDate)
+      data.sort(this.sortDate)                    //Sorting the dates fetched from API
       //console.log(data);
       data.forEach((date)=>{
         let month=date.date.slice(5,7);
         
        // console.log(month);
         console.log(this.currMonth);
-        if(this.currMonth===month){
+        if(this.currMonth===month){               //Only attendance for current month should be displayed
           let count=0;
         date.present.forEach((present)=>{
           count++;
