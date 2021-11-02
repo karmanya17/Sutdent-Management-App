@@ -50,7 +50,7 @@ export class AttendanceComponent implements OnInit {
     console.log(this.presentStudents)
     if(event.checked){
       this.presentStudents.push(student);
-      console.log(this.presentStudents)
+     // console.log(this.presentStudents)
     }
     else{
       for(let i=0;i<this.presentStudents.length;i++)
@@ -58,7 +58,7 @@ export class AttendanceComponent implements OnInit {
         if(this.presentStudents[i]==student)
         {
           this.presentStudents.splice(i,1);
-          console.log(this.presentStudents)
+          //console.log(this.presentStudents)
           return;
         }
       }
