@@ -10,7 +10,7 @@ export class StudentListComponent implements OnInit {
   studentList:Array<student> = []
   constructor(private studentService:StudentService) {
   
-   console.log(this.studentList)
+   //console.log(this.studentList)
   }
   ngOnInit(): void {
     this.loadData();
