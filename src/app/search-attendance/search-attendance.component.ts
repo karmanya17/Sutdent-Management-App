@@ -33,7 +33,7 @@ export class SearchAttendanceComponent implements OnInit {
      // console.log(data);
       data.forEach((student)=>{
         if(student.date==this.date){
-          console.log(student);
+          //console.log(student);
           student.present.forEach((studentdata) => {
             this.presentStudentList.push(studentdata);
           });
