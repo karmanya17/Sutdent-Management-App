@@ -56,7 +56,7 @@ colorScheme = {
         let month=date.date.slice(5,7);
         
        // console.log(month);
-        console.log(this.currMonth);
+      //  console.log(this.currMonth);
         if(this.currMonth===month){               //Only attendance for current month should be displayed
           let count=0;
         date.present.forEach((present)=>{
