@@ -30,7 +30,7 @@ export class StudentEditComponent implements OnInit {
     this.activeRoute.params.subscribe((paramsData) => {
       this.id = paramsData.id;
       this.userService.getUserByID(paramsData.id).subscribe((data) => {
-        console.log(data)
+       // console.log(data)
         delete data.id
         this.studentForm.setValue(data)
       })
